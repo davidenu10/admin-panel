@@ -1,0 +1,27 @@
+.line {
+  height: 6rem;
+  width: 1px;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  left: 3rem;
+  z-index: -1;
+}
+// div.line:last-child {
+//   display: none;
+// }
+mat-icon,
+mat-progress-spinner {
+  background-color: #fafafa;
+}
+
+.active {
+  font-weight: bold;
+  font-size: 17px;
+  color: steelblue;;
+}
+
+.completed {
+  font-weight: bold;
+  font-size: 17px;
+  color: green;
+}

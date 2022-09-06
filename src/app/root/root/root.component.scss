@@ -1,0 +1,27 @@
+@import "../../../assets/scss/variables.scss";
+
+.sidenav {
+    width: 14rem;
+    background-color: $primary;
+    height: 100vh;
+    border-radius: 0 2rem 2rem 0;
+}
+a.mat-list-item {
+    border-radius: 0 1.5rem 1.5rem 0;
+    margin-right: 1rem;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+a.mat-list-item.active {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: $primary;
+}
+.nav-toolbar{
+    background-color: $primary;
+}
+mat-drawer-content{
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}

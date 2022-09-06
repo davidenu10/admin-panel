@@ -1,0 +1,14 @@
+<mat-card class="mat-elevation-z12 d-flex flex-column justify-content-start align-items-start p-5 round">
+    <img class="login-icon mt-2" src="../../assets/svgs/login-icon.svg">
+    <span class="mat-headline fw-bold mt-4">LOGIN</span>
+    <span class="mat-body-1 mt-0 mb-2">Enter Your Credentials To Access Your Account.</span>
+    <form>
+        <mat-form-field floatLabel="always" appearance="outline" class="mt-4 w-100">
+            <mat-label>Email Address</mat-label>
+            <input matInput required="true" placeholder="Enter your email address">
+            <span matSuffix>@</span>
+            <mat-error>Required</mat-error>
+        </mat-form-field>
+        <button type="submit" mat-flat-button color="primary" class="w-100">LOGIN</button>
+    </form>
+</mat-card>

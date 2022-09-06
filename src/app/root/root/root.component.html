@@ -1,0 +1,18 @@
+<mat-drawer-container style="height: 100vh;">
+    <mat-drawer opened="true" #drawer class="sidenav" position="start" mode="side">
+        <mat-toolbar class="nav-toolbar">
+            <img src="../../../assets/svgs/nav-logo.png">
+        </mat-toolbar>
+        <mat-nav-list class="pe-4 mt-5">
+            <a mat-list-item [routerLink]="link?.href" routerLinkActive="active"
+                *ngFor="let link of navService?.getLinks()"> <img class="mx-2 nav-icon" [src]="link?.icon">{{ link?.name
+                }} </a>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content class="h-100 d-flex flex-column">
+        <mat-toolbar><span class="mx-4">{{navService.getActiveLink()?.name}}</span></mat-toolbar>
+        <div class="p-4">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

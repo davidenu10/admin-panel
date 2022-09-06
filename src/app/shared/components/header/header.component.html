@@ -1,0 +1,36 @@
+<div class="header-wrapper" *ngIf="contents" [style.background-color]="headerBG">
+  <!-- <mat-toolbar #headerToolbar> -->
+    <div class="d-flex justify-content-between width-100 align-items-center h-100">
+      <div class="d-flex align-items-center">
+        <img [src]="logo" class="logo">
+      </div>
+      <div *ngIf="contents.isInternal">
+        <button mat-icon-button [style.background-color]="contents.color" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>reorder</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="profile()">
+            <mat-icon>account_box</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>account_balance_wallet</mat-icon>
+            <span>My balance</span>
+          </button>
+          <button mat-menu-item (click)="transactionHistory()">
+            <mat-icon>assignment</mat-icon>
+            <span>Transaction History</span>
+          </button>
+          <button mat-menu-item (click)="preferences()">
+              <mat-icon>hourglass_full</mat-icon>
+              <span>Preferences</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>settings_power</mat-icon>
+              <span>Logout</span>
+            </button>
+        </mat-menu>  
+        </div>
+    </div>
+  <!-- </mat-toolbar> -->
+</div>

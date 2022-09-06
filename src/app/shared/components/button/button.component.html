@@ -1,0 +1,6 @@
+<div class="button-wrap">
+    <button [disabled]="isDisabled" mat-flat-button [color]="buttonInputs.bgColor"
+    [ngClass]="isDisabled ? 'disabled': 'enabled'" 
+    [ngStyle]="{'background-color': buttonInputs.bgColor, 'color':  buttonInputs.color, 'width': buttonInputs.width}" 
+    (click)="onClick()">{{buttonInputs.label}}</button>
+</div>

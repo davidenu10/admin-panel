@@ -1,0 +1,49 @@
+<!-- <mat-stepper orientation="vertical" #stepper>
+    -- <ng-template matStepperIcon="edit">
+        <i class="fa fa-check-circle"></i>
+    </ng-template>-- --
+    <ng-template matStepperIcon="active">
+        <i class="fa fa-dot-circle-o"></i>
+    </ng-template> 
+    <!- <ng-template matStepperIcon="done">
+        <i class="fa fa-dot-circle-o"></i>
+    </ng-template> -->
+<!-- <ng-template matStepperIcon="number">
+        <i class="fa fa-dot-circle-o"></i>
+    </ng-template> --
+    <ng-template matStepperIcon="phone">
+        <mat-icon>forum</mat-icon>
+    </ng-template> 
+    <ng-template matStepperIcon="done">
+        <i class="fa fa-dot-circle-o"></i>
+    </ng-template>
+    <mat-step *ngFor="let step of steps" state="phone">
+        <ng-template matStepLabel>{{step?.name}}</ng-template>
+    </mat-step>
+</mat-stepper> -->
+<!-- <mat-stepper orientation="vertical" #stepper>
+    <mat-step *ngFor="let step of steps">
+        {{step | json}}
+        <ng-template matStepperIcon="edit">
+            <mat-icon *ngIf="!step?.loading && step?.completed">check_outline</mat-icon>
+            <mat-icon *ngIf="!step?.loading && !step?.completed" style="opacity: 0.5;">check_outline</mat-icon>
+            <mat-progress-spinner *ngIf="step?.loading" mode="indeterminate" diameter="20" strokeWidth="2">
+            </mat-progress-spinner>
+        </ng-template>
+        <ng-template matStepLabel>{{step?.label}}</ng-template>
+    </mat-step>
+</mat-stepper> -->
+<div class="d-flex flex-column">
+    <div *ngFor="let step of steps; let i = index;" class="d-flex flex-row my-4">
+        <div class="mx-2 d-flex justify-content-center align-items-center" style="background-color:#fafafa; height: 2rem; width: 2rem;">
+            <mat-icon *ngIf="!step?.loading && step?.completed" style="color: lightgreen;">check_outline</mat-icon>
+            <mat-icon *ngIf="!step?.loading && !step?.completed" style="color:rgba(0,0,0,0.5)">check_outline</mat-icon>
+            <mat-progress-spinner *ngIf="step?.loading" mode="indeterminate" diameter="20" strokeWidth="2">
+            </mat-progress-spinner>
+        </div>
+        <!-- <div ></div> -->
+        <div class="mt-1" [class.active]="step?.loading" [class.completed]="step?.completed">{{step?.label}}</div>
+        {{isLastStep(i+1)}}
+        <!-- <div class="line" *ngIf="i + 1 !== steps?.length"></div> -->
+    </div>
+</div>

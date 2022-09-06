@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavService } from './services/nav.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'admin-panel';
+
+  constructor(private navService: NavService){
+  }
 }

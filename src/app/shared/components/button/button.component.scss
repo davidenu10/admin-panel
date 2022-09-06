@@ -1,0 +1,15 @@
+.button-wrap {
+    border: none;
+    // padding: 5px 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.disabled {    
+    color: #FFFFFF;
+    opacity: 0.5;
+    // background-color: #008cba !important
+}
+.enabled {
+    opacity: 1;
+}
