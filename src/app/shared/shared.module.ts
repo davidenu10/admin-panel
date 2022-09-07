@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { StaticInfoComponent } from './components/static-info/static-info.component';
+import { MessageModule } from './message/message.module';
 
 @NgModule({
   declarations: [
@@ -20,14 +21,16 @@ import { StaticInfoComponent } from './components/static-info/static-info.compon
   imports: [
     CommonModule,
     MaterialModule,
-    TranslateModule
+    TranslateModule,
+    MessageModule
   ],
   exports: [
     MaterialModule,
     SteppedStatusComponent,
     HeaderComponent,
     FooterComponent,
-    ButtonComponent
+    ButtonComponent,
+    MessageModule
   ]
 })
 export class SharedModule {

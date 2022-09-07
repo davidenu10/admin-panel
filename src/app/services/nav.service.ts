@@ -45,8 +45,8 @@ export class NavService {
       return e?.routerEvent?.type === 1;
     })).subscribe(() => {
       const parsedUrl = new URL(window.location.href);
-      console.log(parsedUrl.pathname);
-      console.log(this.links.find(l => l.href === parsedUrl.pathname));
+      // console.log(parsedUrl.pathname);
+      // console.log(this.links.find(l => l.href === parsedUrl.pathname));
       this.activeLink.next(this.links.find(l => l.href === parsedUrl.pathname));
     })
   }

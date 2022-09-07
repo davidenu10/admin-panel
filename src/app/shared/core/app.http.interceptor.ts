@@ -12,8 +12,8 @@ import {
 } from '@angular/common/http';
 
 import { AuthService } from './auth.service';
-import { environment } from '../../../environments/environment';
 import { Router } from '@angular/router';
+import { environment } from 'environments/environment';
 
 
 

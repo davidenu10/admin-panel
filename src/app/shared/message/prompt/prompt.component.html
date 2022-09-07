@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-end align-items-center">
+    <mat-icon class="position-relative end-0" mat-dialog-close>close</mat-icon>
+</div>
+<mat-dialog-content class="my-2">
+    <div class="text-capitalize mat-subheading-2 text-center">{{message}}</div>
+</mat-dialog-content>
+<div mat-dialog-actions class="mb-0 d-flex" align="center">
+    <button mat-flat-button class="flex-fill" [color]="actions[0]?.color"
+        (click)="onClickAction(actions[0])">{{actions[0]?.label}}</button>
+    <button mat-stroked-button class="flex-fill" [color]="actions[0]?.color"
+        (click)="onClickAction(actions[1])">{{actions[1]?.label}}</button>
+</div>
