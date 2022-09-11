@@ -1,0 +1,14 @@
+.wrap {
+    box-sizing: border-box;
+
+    mat-card {
+        button {
+            background: #279FFE;
+            border-radius: 5px;
+            padding: 15px 30px;
+            box-sizing: border-box;
+            border: none;
+            color: white;
+        }
+    }
+}
